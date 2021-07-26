@@ -1,0 +1,9 @@
+{% extends 'stfcrawler/base.html' %}
+
+{% block content %}
+    <h1>Inserir Grupos de Acord&atilde;os</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_ul }}
+        <button type="submit" class="save btn btn-default">Salvar</button>
+    </form>
+{% endblock %}

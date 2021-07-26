@@ -1,0 +1,13 @@
+{% extends 'navegador/base.html' %}
+
+{% block content %}
+{% if lista_acordaos %}
+    <ul>
+    {% for acordao in lista_acordaos %}        
+        <li><a href="{% url 'navegador:detail' acordao.id_processo %}">{{ acordao.id_processo }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Acordãos indisponíveis</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'stfcrawler/base.html' %}
+
+{% load bootstrap3 %}
+
+{% block title %}
+    Inserir Grupos de Acord&atilde;os
+{% endblock %}
+
+{% block content %}
+    <!--div id="progress">Recuperando ac&oacute;rd&acute;os...</div-->
+
+    <form role="form" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
+    </form>
+
+{% endblock %}

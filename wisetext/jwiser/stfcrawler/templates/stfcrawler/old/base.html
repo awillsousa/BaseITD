@@ -1,0 +1,20 @@
+{% extends 'stfcrawler/bootstrap.html' %}
+
+{% load bootstrap3 %}
+
+{% block bootstrap3_content %}
+    <div class="container">
+        <h1>{% block title %}(no title){% endblock %}</h1>
+
+        <p>
+            <a href="{% url 'home' %}">In&iacute;cio</a>            
+            <a href="{% url 'pagination' %}">Ac&oacute;rd&atilde;os</a>
+            <a href="{% url 'misc' %}">Sair</a>
+        </p>
+
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}(no content){% endblock %}
+    </div>
+
+{% endblock %}

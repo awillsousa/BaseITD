@@ -1,0 +1,13 @@
+{% extends 'stfcrawler/base.html' %}
+
+{% block content %}
+{% if lista_acordaos %}
+    <ul>
+    {% for acordao in lista_acordaos %}        
+        <li><a href="{% url 'stfcrawler:detail' acordao.id_processo %}">{{ acordao.id_processo }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}

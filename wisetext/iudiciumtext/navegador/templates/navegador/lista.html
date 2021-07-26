@@ -1,0 +1,25 @@
+{% extends 'navegador/base.html' %}
+
+{% load bootstrap3 %}
+
+{% block title %}
+    Ac&oacute;rd&atilde;os
+{% endblock %}
+
+{% block content %}
+    {% if lista_acordaos %}	
+	    <table class="table">
+	    {% for acordao in lista_acordaos %}        		
+		<tr>
+			<td><a href="{% url 'stfcrawler:detail' acordao.id_processo %}">Processo n&ordm; {{ acordao.id_processo }}</a></td>
+		</tr>
+	    {% endfor %}
+	    </table>
+    {% else %}
+            <p>Acórdãos indisponíveis.</p>
+    {% endif %}
+    <hr>
+
+    {% bootstrap_pagination lista_acordaos url="/navegador/acordao?page=1" size="large" %}
+
+{% endblock %}

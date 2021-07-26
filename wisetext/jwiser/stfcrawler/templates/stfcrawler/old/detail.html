@@ -1,0 +1,13 @@
+{% extends 'stfcrawler/base.html' %}
+
+{% block content %}
+<h1>{{ acordao.id_processo }}</h1>
+<ul>
+    <li><a href="{{ acordao.URL }}">Acompanhamento Processual</a></li>
+    <li><a href="{{ acordao.URL_inteiro_teor }}">Inteiro Teor</a></li>
+    <li>{{ acordao.inteiro_teor }}</li>
+    <li><textarea rows="20" cols="150">{{ acordao.HTML }}</textarea></li>     
+    <li><textarea rows="20" cols="150">{{ acordao.texto }}</textarea></li>     
+    
+</ul>
+{% endblock %}

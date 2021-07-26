@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../iudiciumtext/.idea/iudiciumtext.iml" filepath="$PROJECT_DIR$/../iudiciumtext/.idea/iudiciumtext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jwiser.iml" filepath="$PROJECT_DIR$/.idea/jwiser.iml" />
+    </modules>
+  </component>
+</project>

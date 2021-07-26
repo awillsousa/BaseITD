@@ -1,0 +1,18 @@
+{% extends 'navegador/base.html' %}
+{% load bootstrap3 %}
+{% block title %}{% endblock %}
+{% block content %}
+<h3>Processo n&ordm;: {{ acordao.id_processo }}</h3>
+<table class="table">	    
+	<tr><td><a href="{{ acordao.URL }}">Acompanhamento Processual</a></td></tr>
+	<tr><td><a href="{{ acordao.URL_inteiro_teor }}">Link Inteiro Teor</a></td></tr>
+	<tr><td><strong>Arquivo PDF: </strong>{{ acordao.pdf_inteiro_teor }}
+	<tr><td><strong>Arquivo TXT: </strong>{{ acordao.txt_inteiro_teor }}
+    {% if not existePDF %}
+        {% bootstrap_alert "Arquivo PDF não encontrado! Recupere o acórdão novamento do site do STF."  alert_type='danger' %}
+    {% endif %}</td></tr>                                       
+	<tr><td><strong>Dados Acord&atilde;o</strong><br/><textarea rows="20" cols="150">{{ acordao.texto_basico }}</textarea></td></tr>
+	<tr><td><strong>Criado em: </strong>{{ acordao.criado_em }}
+	<tr><td><strong>Alterado em: </strong>{{ acordao.alterado_em }}
+</table>
+{% endblock %}

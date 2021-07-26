@@ -1,0 +1,16 @@
+PACOTES NECESSÁRIOS PARA EXECUÇÃO DOS SCRIPTS
+
+# Conversao de arquivos pdf para outros formatos
+sudo aptitude install ghostscript
+
+# Conversao e manipulacao de arquivos de imagem
+sudo aptitude install imagemagick
+
+# Biblioteca de OCR do Google
+sudo aptitude install libtesseract3 tesseract-ocr tesseract-ocr-por
+
+# Lista de palavras em portugues para Linux (em /usr/share/dict)
+sudo aptitude install wbrazilian
+
+# Busca aproximada de palavras
+sudo aptitude install tre-agrep
